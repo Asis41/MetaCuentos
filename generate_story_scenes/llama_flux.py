@@ -9,7 +9,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 # Obtener el token desde las variables de entorno
-HUGGINGFACEHUB_API_TOKEN = "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"
+HUGGINGFACEHUB_API_TOKEN = ""
 
 # Asegurarse de que el token fue cargado correctamente
 if not HUGGINGFACEHUB_API_TOKEN:
