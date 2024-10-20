@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+  </head>
+<body>
+    <header>
+        <h1>MetaCuentos</h1>
+        <h2>¡Elige un tema!</h2>
+    </header>
+
+    <div class="grid-container">
+      <!-- Cada imagen del grid -->
+      <div class="grid-item first" style="display: none;">
+  
+        <p>Aire</p>
+      </div>
+      <div class="grid-item second" style="display: none;" >
+        <p>Basura</p>
+      </div>
+      <div class="grid-item thirth">
+        <P>Incendios</P>
+      </div>
+            <div class="grid-item fourth" style="display: none;">
+        <P>Especies<br>en Extincion</P>
+      </div>
+            <div class="grid-item fifth" style="display: none;">
+        <P>Agua</P>
+      </div>
+            <div class="grid-item six" style="display: none;">
+        <P style="font-size: 2rem !important;">Calentamiento<br>Global</P>
+      </div>
+    </div>
+
+    <!-- Imágenes que se mostrarán en el modal -->
+    <div class="modal-images" style="display:none;">
+      <!-- Imágenes del primer elemento -->
+    <img id="image1A" src="https://static.nationalgeographic.es/files/styles/image_3200/public/03-global-warming-gallery_1.webp?w=380&h=254" alt="Image 1A" aire1="https://www.nationalgeographic.es/medio-ambiente/contaminacion-aire-atmosferica"/>
+
+      <img id="image1B" src="https://imagenes.elpais.com/resizer/v2/FVUOF5PWCRFRVG446YARM57OD4.jpg?auth=83105eccae7eef7f07fb136bdd254f3b84a7c66e935b11f6c50f7464876a4a81&width=980" alt="Image 1B" aire2="https://elpais.com/clima-y-medio-ambiente/2024-10-09/un-grupo-de-cientificos-alerta-contra-el-exceso-de-confianza-en-la-captura-del-co-para-revertir-el-calentamiento.html" />
+
+      <!-- Imágenes del segundo elemento -->
+      <img id="image2A" src="https://via.placeholder.com/400x300?text=Image+2A" alt="Image 2A" />
+      <img id="image2B" src="https://via.placeholder.com/400x300?text=Image+2B" alt="Image 2B" />
+
+      <!-- Imágenes del tercer elemento -->
+      <img id="image3A" src="https://imagenes.elpais.com/resizer/v2/EPFH3DOWOBHEBOP2LB7MZITMFQ.jpg?auth=8626816a797a922c1b235247e0757ad123ec32e72cdda0ef2e679a01b1caa280&width=980" alt="Image 3A" aire1="https://elpais.com/clima-y-medio-ambiente/2024-09-26/no-hay-tiempo-que-perder-en-la-lucha-contra-la-deforestacion.html"/>
+      <img id="image3B" src="https://imagenes.elpais.com/resizer/v2/THBWDVUCHBGPRBTA5GR5CTIJNI.JPG?auth=cfa94c9bbb6864d14a496f27caa022e3346d772e22cb4583034b118cd35ac8b4&width=828&height=466&smart=true" alt="Image 3B" aire2="https://elpais.com/clima-y-medio-ambiente/2024-09-26/no-hay-tiempo-que-perder-en-la-lucha-contra-la-deforestacion.html"/>
+
+        <img id="image4A" src="https://via.placeholder.com/400x300?text=Image+4A" alt="Image 4A" />
+      <img id="image4B" src="https://via.placeholder.com/400x300?text=Image+4B" alt="Image 4B" />
+
+        <img id="image5A" src="https://static.nationalgeographic.es/files/styles/image_3200/public/mm1017823121500101.webp?w=1600&h=900" alt="Image 5A" />
+      <img id="image5B" src="https://static.nationalgeographic.es/files/styles/image_3200/public/01refkatrinah14708901.webp?w=1600&h=900" alt="Image 5B" />
+
+        <img id="image6A" src="https://via.placeholder.com/400x300?text=Image+6A" alt="Image 6A" />
+      <img id="image6B" src="https://via.placeholder.com/400x300?text=Image+6B" alt="Image 6B" />
+    </div>
+
+    <!-- Modal para mostrar las dos imágenes diferentes -->
+    <div id="imageModal" class="modal">
+    <div class="modal-content">
+        <!-- Primera imagen en el modal con descripción -->
+        <div class="image-with-text">
+            <a href="{{ url_for('inter') }}"><img id="modalImage1" src="" alt="First Modal Image" /></a>
+            <div class="image-description" id="description1">Descripción de la imagen 1</div>
+        </div>
+        <!-- Segunda imagen en el modal con descripción -->
+        <div class="image-with-text">
+            <a href="{{ url_for('inter') }}"><img id="modalImage2" src="" alt="Second Modal Image" /></a>
+            <div class="image-description" id="description2">Descripción de la imagen 2</div>
+        </div>
+    </div>
+    <button class="close">&times;</button>
+</div>
+
+    <!-- GSAP Script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+    <script src="static/script.js"></script>
+</body>
+
+
+  </body>
+</html>

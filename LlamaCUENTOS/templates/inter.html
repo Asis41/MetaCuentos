@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interacción del Bot</title>
+    <link rel="stylesheet" href="static/inter.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Balsamiq+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+    />
+  </head>
+  <body>
+    <div class="bot">
+      <div class="bot-message">
+        <p id="botMessage">Hola, ¿sobre qué tema te gustaría aprender hoy?</p>
+      </div>
+    </div>
+    <div class="chat-container">
+      <!-- Mensajes del bot -->
+      <div class="chat-box" id="chatBox">
+        <!-- Aquí se mostrará el resumen y luego los villanos -->
+        <div id="villanoContainer" style="display: none;">
+          <p id="villanoText">Elige al villano:</p>
+          <div id="villanoGrid" class="villano-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal para mostrar la historia y el audio -->
+    <div id="historiaModal" class="modal" style="display: none;">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p id="historiaTexto">Aquí aparecerá la historia...</p>
+        <audio controls id="audioPlayer">
+          <source id="audioSource" src="" type="audio/mpeg">
+          Tu navegador no soporta la reproducción de audio.
+        </audio>
+      </div>
+    </div>
+
+    <script src="static/inter.js"></script>
+  </body>
+</html>

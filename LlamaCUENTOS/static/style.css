@@ -1,0 +1,212 @@
+     body {
+         display: flex;
+         justify-content: center;
+         align-items: center;
+         height: 100vh;
+         margin: 0;
+         flex-direction: column;
+         font-family: "Balsamiq Sans";
+     }
+
+     body::before {
+         content: "";
+         position: absolute;
+         top: 0;
+         left: 0;
+         width: 100%;
+         height: 100%;
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/imagen4.png");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+         opacity: 0.4;
+         z-index: -1;
+     }
+
+     h1 {
+        text-align: center;
+         font-size: 4rem;
+     }
+     h2{
+        text-align: center;
+        font-size: 2.5rem;
+     }
+
+     .grid-container {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: 10px;
+         width: 50%;
+         max-width: 1000px;
+         transition: 400ms;
+     }
+
+     .grid-item {
+         display: flex;
+         font-size: 2rem;
+         font-weight: bold;
+         width: 100%;
+         height: 12rem;
+         overflow: hidden;
+         border-radius: 3rem;
+         transition: transform 400ms ease, filter 400ms ease;
+         align-items: center;
+         justify-content: center;
+     }
+
+     .grid-item p {
+         background-color: rgba(33, 180, 3, 0.7);
+         /* Fondo del texto */
+         color: white;
+         width: 100%;
+         /* Abarca todo el ancho */
+         text-align: center;
+         padding: 10px;
+         margin: 0;
+         display: block;
+         /* Para que se comporte como un bloque y abarque todo el ancho */
+     }
+
+     .grid-item img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+         cursor: pointer;
+         transition: transform 400ms ease;
+     }
+
+     .first {
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/fondo43.jpeg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+
+     .second {
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/basurwa.jpeg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+
+     .thirth {
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/fuego.jpeg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+
+     .fourth {
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/extinsion.jpeg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+
+     .fifth {
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/agua.jpeg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+
+     .six {
+         background-image: url("https://github.com/ki-labor-abstrc/imagenes/raw/main/calentamiento.jpeg");
+         background-size: cover;
+         background-position: center;
+         background-repeat: no-repeat;
+         background-attachment: fixed;
+     }
+
+     /* Efecto hover */
+     .grid-item:hover {
+         transform: scale(1.1);
+     }
+
+     .grid-container:hover>.grid-item:not(:hover) {
+         filter: blur(10px);
+         transform: scale(0.9);
+     }
+
+
+
+     /* Estilos del modal */
+     .modal {
+         display: none;
+         position: fixed;
+         z-index: 1;
+         left: 0;
+         top: 0;
+         width: 100%;
+         height: 100%;
+         background-color: rgba(0, 0, 0, 0.8);
+         justify-content: center;
+         align-items: center;
+     }
+
+     .modal-content {
+         display: flex;
+         background-color: #fff;
+         padding: 20px;
+         width: 70%;
+         max-width: 900px;
+         gap: 20px;
+         opacity: 0;
+         /* Inicialmente invisible para la animación */
+         position: relative;
+     }
+
+     .modal img {
+         width: 50%;
+         max-height: 400px;
+         object-fit: contain;
+     }
+
+     .modal-description {
+         width: 50%;
+         font-size: 16px;
+         color: #333;
+         display: flex;
+         align-items: center;
+     }
+
+     .close {
+         position: absolute;
+         top: 10px;
+         right: 10px;
+         font-size: 24px;
+         color: #fff;
+         background-color: #333;
+         padding: 5px 10px;
+         cursor: pointer;
+         border: none;
+     }
+
+     /* Botones de navegación */
+     .nav-button {
+         position: absolute;
+         top: 50%;
+         transform: translateY(-50%);
+         font-size: 24px;
+         background-color: rgba(255, 255, 255, 0);
+         color: white;
+         border: none;
+         cursor: pointer;
+         padding: 10px;
+     }
+
+     .prev {
+         font-size: 4rem;
+         left: 7rem;
+     }
+
+     .next {
+         font-size: 4rem;
+         right: 7rem;
+     }
